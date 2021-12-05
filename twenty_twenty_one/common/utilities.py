@@ -63,6 +63,7 @@ def get_rating(numbers, bit):
             Counter(list(zip(*numbers))[idx]).most_common(), key=lambda x: (x[1], x[0])
         )
         numbers = [item for item in numbers if item[idx] == count[bit][0]]
+        print(numbers)
         idx += 1
 
     return int(numbers[0], 2)
